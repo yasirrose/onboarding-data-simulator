@@ -8,7 +8,7 @@ This project simulates customer onboarding data and provides SQL queries to anal
 - Node.js (version >= 12)
 
 ### Setup Instructions
-1. Cd into the repository:
+1. Switch to the directory:
    ```bash
    cd onboarding-data-simulator
    ```
