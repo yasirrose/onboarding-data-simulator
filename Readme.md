@@ -6,10 +6,9 @@ This project simulates customer onboarding data and provides SQL queries to anal
 
 ### Prerequisites
 - Node.js (version >= 12)
-- npm or yarn package manager
 
 ### Setup Instructions
-1. Clone the repository:
+1. Cd into the repository:
    ```bash
    cd onboarding-data-simulator
    ```
@@ -112,8 +111,8 @@ SELECT
     TO_CHAR(created_at, 'Month') AS month_name,
     COUNT(*) AS customer_count
 FROM customers
-WHERE created_at BETWEEN '2025-01-01' AND '2025-12-31'
-GROUP BY EXTRACT(MONTH FROM created_at), TO_CHAR(created_at, 'Month')
+WHERE EXTRACT(YEAR FROM created_at) = 2025
+GROUP BY month, month_name
 ORDER BY month;
 ```
 
